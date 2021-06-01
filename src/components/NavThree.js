@@ -79,31 +79,6 @@ class NavThree extends Component {
               <ul className=" navigation-box">
                 <li className="current">
                   <Link to="/">Home</Link>
-                  <ul className="sub-menu">
-                    <li>
-                      <Link to="/">Home 01</Link>
-                    </li>
-                    <li>
-                      <Link to="/index-2">Home 02</Link>
-                    </li>
-                    <li>
-                      <Link to="/index-3">Home 03</Link>
-                    </li>
-                    <li>
-                      <a href="#none">Header Versions</a>
-                      <ul className="sub-menu">
-                        <li>
-                          <Link to="/">Header 01</Link>
-                        </li>
-                        <li>
-                          <Link to="/index-2">Header 02</Link>
-                        </li>
-                        <li>
-                          <Link to="/index-3">Header 03</Link>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
                 </li>
                 <li>
                   <a href="#none">Pages</a>
