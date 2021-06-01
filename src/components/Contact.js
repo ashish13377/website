@@ -79,7 +79,7 @@ const Contact = () => {
         </div>
       </section>
       <iframe
-        src="https://www.google.com/maps/place/Heritage+Institute+of+Technology,+Kolkata/@22.5165282,88.4174763,15z/data=!4m5!3m4!1s0x0:0x30f8067b73c45d8!8m2!3d22.5165282!4d88.4174763"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14742.683528630962!2d88.4174763!3d22.5165282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x30f8067b73c45d8!2sHeritage%20Institute%20of%20Technology%2C%20Kolkata!5e0!3m2!1sen!2sin!4v1622542214623!5m2!1sen!2sin"
         className="google-map__contact"
         title="template google map"
         allowFullScreen=""
