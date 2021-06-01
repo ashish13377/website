@@ -135,7 +135,7 @@ const Footer = () => {
         <div className="site-footer__bottom">
           <div className="container">
             <p className="site-footer__copy">
-              &copy; Copyright 2020 by <a href="#none">Layerdrops.com</a>
+              &copy; Copyright 2021 by <a href="#none">ISOI-HITK</a>
             </p>
             <div className="site-footer__social">
               <div
