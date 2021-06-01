@@ -36,7 +36,7 @@ const SliderTwo = () => {
                     in an easy way
                   </h3>
                   <a href="#none" className="thm-btn banner-two__btn">
-                    Learn More
+                    Learn More about things
                   </a>
                 </div>
               </div>
