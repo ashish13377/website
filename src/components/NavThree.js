@@ -67,7 +67,7 @@ class NavThree extends Component {
                 <img
                   src={logo}
                   className="main-logo"
-                  width="128"
+                  width="160"
                   alt="Awesome alter text"
                 />
               </Link>
