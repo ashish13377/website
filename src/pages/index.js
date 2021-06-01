@@ -1,37 +1,36 @@
-import React from "react";
+import React from 'react';
 import Layout from "../components/Layout";
-import Topbar from "../components/Topbar";
-import NavOne from "../components/NavOne";
-import SliderOne from "../components/SliderOne";
 import Footer from "../components/Footer";
-import AboutTwo from "../components/AboutTwo";
-import CourseOne from "../components/CourseOne";
-import VideoTwo from "../components/VideoTwo";
-import CountdownKipso from "../components/CountdownKipso";
-import CourseCatOne from "../components/CourseCatOne";
-import CallToActionThree from "../components/CallToActionThree";
+import NavThree from "../components/NavThree";
+import SliderOne from "../components/SliderOne";
+import CourseCatThree from "../components/CourseCatThree";
+import CallToActionOne from "../components/CallToActionOne";
+import TeamTab from "../components/TeamTab";
+import CourseThree from "../components/CourseThree";
+import CallToActionSix from "../components/CallToActionSix";
+import TestimonialOne from "../components/TestimonialOne";
+import VideoThree from "../components/VideoThree";
 import BrandsTwo from "../components/BrandsTwo";
-import BlogTwo from "../components/BlogTwo";
-import CallToActionFour from "../components/CallToActionFour";
-import SubscribeOne from "../components/SubscribeOne";
+import CallToActionFive from "../components/CallToActionFive";
 
-const HomePage = () => (
-  <Layout pageTitle="Kipso - React Next Online Education Learning & LMS Template">
-    <Topbar />
-    <NavOne />
-    <SliderOne />
-    <AboutTwo />
-    <CourseOne />
-    <VideoTwo />
-    <CountdownKipso />
-    <CourseCatOne />
-    <CallToActionThree />
-    <BrandsTwo />
-    <BlogTwo />
-    <CallToActionFour />
-    <SubscribeOne />
-    <Footer />
-  </Layout>
-);
 
-export default HomePage;
+const HomePageThree = () => {
+    return (
+        <Layout pageTitle="Kipso | Home 3">
+            <NavThree />
+            <SliderOne />
+            <CourseCatThree />
+            <CallToActionOne />
+            <TeamTab />
+            <CourseThree />
+            <CallToActionSix />
+            <TestimonialOne />
+            <VideoThree />
+            <BrandsTwo />
+            <CallToActionFive />
+            <Footer />
+        </Layout>
+    );
+};
+
+export default HomePageThree;
