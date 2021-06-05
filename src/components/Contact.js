@@ -1,31 +1,27 @@
 import React, { useState } from "react";
-import db from "../firebase";
-// import firebase from "firebase"
+import emailjs from 'emailjs-com';
+import { init } from 'emailjs-com';
+init("user_S2YtNI7m7yqCGSn32Z4fN");
 const Contact = () => {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [msg, setMsg] = useState();
-
-  const sendMessage = (e) => {
+  const [name, setName] = useState("");
+  const [msg, setMsg] = useState("");
+  const [email, setEmail] = useState("");
+  const sendEmail = (e) => {
     e.preventDefault();
-    try {
-      if (!name || !email || !msg) {
-        alert("please enter given field first!")
-      } else {
-        db.collection("comments").add({
-          name: name,
-          email: email,
-          message: msg,
-          time: new Date().toLocaleString(),
+    if (!name || !email || !msg) {
+      alert("Please Fill above field first!")
+    } else {
+      emailjs.sendForm('service_o45u2k6', 'template_4eg8pii', e.target, 'user_S2YtNI7m7yqCGSn32Z4fN')
+        .then(result => {
+          console.log(result.text);
+        }).catch((error) => {
+          console.log(error);
         })
-        alert("Message send Successfully!!")
-      }
-      setName("")
-      setEmail("")
-      setMsg("")
-    }catch(error){
-      console.log(error);
+        alert("Message Send!")
     }
+    setEmail("")
+    setName("")
+    setMsg("")
   }
 
   return (
@@ -81,20 +77,21 @@ const Contact = () => {
             with us
           </h2>
           <form
+            onSubmit={sendEmail}
             className="contact-one__form contact-form-validated"
             noValidate="novalidate"
           >
             <div className="row low-gutters">
               <div className="col-lg-6">
-                <input type="text" name="name" placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)} />
+                <input type="text" name="name" placeholder="Your Name" value={name} onChange={e => setName(e.target.value)} />
               </div>
               <div className="col-lg-6">
-                <input type="text" placeholder="Email Address" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input type="text" placeholder="Email Address" name="email" value={email} onChange={e => setEmail(e.target.value)} />
               </div>
               <div className="col-lg-12">
-                <textarea placeholder="Write Message" name="message" value={msg} onChange={(e) => setMsg(e.target.value)} ></textarea>
+                <textarea placeholder="Write Message" name="message" value={msg} onChange={e => setMsg(e.target.value)} ></textarea>
                 <div className="text-center">
-                  <button type="submit" onClick={sendMessage} className="contact-one__btn thm-btn">
+                  <button type="submit" className="contact-one__btn thm-btn">
                     Submit Comment
                   </button>
                 </div>
